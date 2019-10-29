@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars News, Facts, and Images</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" href="data:;base64,iVBORwOKGO="> 
+
+</head>
+
+<body>
+  <div class = "container-fluid">
+    <div class = 'row banner'>
+        <div class="col-md-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/1200px-OSIRIS_Mars_true_color.jpg" alt="Mars" width=30%>
+        </div>
+        <div class='col-md-6 text-center'>
+            <br> <br>
+            <h1 class="banner_txt"> Mission to Mars </h1>
+            <br> <br> <br> 
+            <a href="/scrape" id="scrape_btn" class="btn btn-primary" role="button">Scrape New Data</a>
+            <br> <br>
+        </div>
+        <div class="col-md-3">
+        <img src="https://cdn.technologyreview.com/i/images/launcher1mars.jpg?sw=959&cx=0&cy=0&cw=1600&ch=900" alt="Vacation" width=30%>
+        </div>
+    </div>
+    <div id="first_text" class="row">
+        <div class='col-md-1'>
+        </div>
+        <div class="col-md-10">
+        <br> <br>
+           {% if news_title %}
+                <h2>Latest Mars News</h2>
+                <hr>
+                <h3>{{news_title}}</h3>
+                <p> {{paragraph_text_1}}</p>
+                <br>
+                <p> {{paragraph_text_2}}</p>
+                <br>
+                <p> Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war and is often referred to as the 'Red Planet'.</p>
+                <br>
+            {% else %}
+                <h3>Click the Scrape New Data button above to get the latest Mars news, facts, and images</h3>
+                <br> 
+            {% endif %}
+            </div>
+        <div class='col-md-1'>
+        </div>
+    </div>
+    <hr>
+    <div class='row'>
+        <div class='col-md-8'>
+            <h3>Featured Image</h3>
+            <hr>
+            <figure>
+                <img src={{featured_image_url}} alt="Featured image for NASA mars page">
+            </figure>
+        </div>
+        <div class='col-md-4'>
+            <div class="data-box">
+                <h3>Current Weather on Mars</h3>
+                <hr>
+                <p>{{mars_weather_tweet}}</p>
+            </div>
+            <br>
+            <div class="data-box">
+                <h3>Mars Facts</h3>
+                <hr>
+                {{mars_facts_table|safe}}
+            </div>
+            <br>
+            <div class="data-box">
+                <h3>Sources</h3>
+                <hr>
+                <p> <a target="_blank" href="https://mars.nasa.gov/news/"> NASA Mars News Site </a> </p>
+                <p> <a target="_blank" href="https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"> JPL Mars Space Images </a> </p>
+                <p> <a target="_blank" href="https://twitter.com/marswxreport?lang=en"> Mars Weather Twitter </a> </p>
+                <p> <a target="_blank" href="http://space-facts.com/mars/"> Mars Facts </a> </p>
+                <p> <a target="_blank" href="https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"> Mars Hemisphere Images </a> </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-md-12'>
+            <h2 class="text-center"> Mars Hemispheres </h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-md-6'>
+            <figure>
+                <figcaption class="hemisphere_caption"> {{hemisphere_title_1}} </figcaption>
+                <img src={{hemisphere_img_1}} alt="Mars hemisphere One">
+            </figure>
+        </div>
+        <div class='col-md-6'>
+            <figure>
+                <figcaption class="hemisphere_caption"> {{hemisphere_title_2}} </figcaption>
+                <img src={{hemisphere_img_2}} alt="Mars hemisphere Two">
+            </figure>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col-md-6'>
+            <figure>
+                <figcaption class="hemisphere_caption"> {{hemisphere_title_3}} </figcaption>
+                <img src={{hemisphere_img_3}} alt="Mars hemisphere Three">
+            </figure>
+        </div>
+        <div class='col-md-6'>
+            <figure>
+                <figcaption class="hemisphere_caption"> {{hemisphere_title_4}} </figcaption>
+                <img src={{hemisphere_img_4}} alt="Mars hemisphere Four">
+            </figure>
+        </div>
+    </div>
+    <p>
+      <a href="http://css-validator.org/check/referer">
+      <img style="border:0;width:88px;height:31px"
+          src="http://css-validator.org/images/vcss-blue.png"
+          alt="CSS Validator" />
+      </a>
+      <img src = "https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190529123117-after-the-moon-mars-1.jpg"  alt="Life on Mars" width=30%>
+    </p>
+  </div>
+  <footer>
+  <p>Created by: CaptainAmerica</p>
+  </footer>
+</body>
+</html>
