@@ -34,20 +34,15 @@
         </div>
         <div class="col-md-10">
         <br> <br>
-           {% if news_title %}
                 <h2>Latest Mars News</h2>
                 <hr>
-                <h3>{{news_title}}</h3>
-                <p> {{paragraph_text_1}}</p>
-                <br>
-                <p> {{paragraph_text_2}}</p>
+                <h3>{{Mars_Info.Title}}</h3>
+                <p> {{Mars_Info.Text}}</p>
                 <br>
                 <p> Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war and is often referred to as the 'Red Planet'.</p>
                 <br>
-            {% else %}
                 <h3>Click the Scrape New Data button above to get the latest Mars news, facts, and images</h3>
                 <br> 
-            {% endif %}
             </div>
         <div class='col-md-1'>
         </div>
@@ -58,20 +53,21 @@
             <h3>Featured Image</h3>
             <hr>
             <figure>
-                <img src={{featured_image_url}} alt="Featured image for NASA mars page">
+                <img src={{Mars_Info.Image}} alt="Featured image for NASA mars page">
             </figure>
         </div>
         <div class='col-md-4'>
             <div class="data-box">
                 <h3>Current Weather on Mars</h3>
                 <hr>
-                <p>{{mars_weather_tweet}}</p>
+                <p>{{Mars_Info.Weather}}</p>
             </div>
             <br>
             <div class="data-box">
                 <h3>Mars Facts</h3>
                 <hr>
-                {{mars_facts_table|safe}}
+                {{Mars_Info.Facts1}}
+                {{Mars_Info.Facts2}}     
             </div>
             <br>
             <div class="data-box">
@@ -93,28 +89,25 @@
     <div class="row">
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_1}} </figcaption>
-                <img src={{hemisphere_img_1}} alt="Mars hemisphere One">
+                <figcaption class="Hemisphere 1 </figcaption>
+                <img src = {{ Mars_Info.Hemispheres[0].Image_URL}} width="100%" alt="Mars hemisphere One">
             </figure>
         </div>
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_2}} </figcaption>
-                <img src={{hemisphere_img_2}} alt="Mars hemisphere Two">
+                <figcaption class="Hemisphere 2 </figcaption>
+                <img src = {{ Mars_Info.Hemispheres[1].Image_URL}} width="100%" alt="Mars hemisphere Two">
             </figure>
         </div>
-    </div>
-    <div class="row">
-        <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_3}} </figcaption>
-                <img src={{hemisphere_img_3}} alt="Mars hemisphere Three">
+                <figcaption class="Hemisphere 3 </figcaption>
+                <img src = {{ Mars_Info.Hemispheres[2].Image_URL}} width="100%" alt="Mars hemisphere Three">
             </figure>
         </div>
         <div class='col-md-6'>
             <figure>
-                <figcaption class="hemisphere_caption"> {{hemisphere_title_4}} </figcaption>
-                <img src={{hemisphere_img_4}} alt="Mars hemisphere Four">
+                <figcaption class="Hemisphere 4 </figcaption>
+                <img src = {{ Mars_Info.Hemispheres[3].Image_URL}} width="100%" alt="Mars hemisphere Four">
             </figure>
         </div>
     </div>
@@ -123,6 +116,9 @@
     </p>
   </div>
   <footer>
+  <br>
+  <br>
+
   <p>Created by: CaptainAmerica</p>
   </footer>
 </body>

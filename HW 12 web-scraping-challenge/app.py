@@ -5,25 +5,34 @@ import mars_scrape
 app = Flask(__name__)
 # Use PyMongo to establish Mongo connection
 # client = pymongo.MongoClient('mongodb://localhost:27017/mars_scrape')
-client = PyMongo(app, uri="mongodb://localhost:27017/mars_scrape")
+mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
+mars_data=mars_scrape.scrape_info()
+print('this one', mars_data)
+mongo.db.collection.update({}, mars_data, upsert=True)
+
 # db = client.mars_data_DB
 # mars_collection = db.mars_collection
 
 @app.route("/")
-def render_index():
-    # destination_data = mongo.db.collection.find_one()
-    # Error handler for missing collection
-    mars_find =  client.db.collection.find_one()
-    return render_template("index.html.", mars=mars_find)
+def home():
+    Mars_data = mongo.db.collecion.find_one()
+    print(Mars_data)
+    return render_template("index.html", Mars_Info=Mars_data)
 
-    # try:
-    #     mars_find =  mars_collection.find_one()
-    #     # Distributes data from collection
-    #     news_title = mars_find['news_data']['news_title']
-    #     paragraph_text_1 = mars_find['news_data']['paragraph_text_1']
-    #     paragraph_text_2 = mars_find['news_data']['paragraph_text_2']
-    #     featured_image_url = mars_find['featured_image_url']
-    #     mars_weather_tweet = mars_find['mars_weather']
+# # def render_index():
+#     # destination_data = mongo.db.collection.find_one()
+#     # Error handler for missing collection
+#     mars_find =  client.db.collection.find_one()
+#     return render_template("index.html.", mars=mars_find)
+
+#     # try:
+#     #     mars_find =  mars_collection.find_one()
+#     #     # Distributes data from collection
+#     #     news_title = mars_find['news_data']['news_title']
+#     #     paragraph_text_1 = mars_find['news_data']['paragraph_text_1']
+#     #     paragraph_text_2 = mars_find['news_data']['paragraph_text_2']
+#     #     featured_image_url = mars_find['featured_image_url']
+#     #     mars_weather_tweet = mars_find['mars_weather']
     #     mars_facts_table = mars_find['mars_facts']
     #     hemisphere_title_1 = mars_find['mars_hemispheres'][0]['title']
     #     hemisphere_img_1 = mars_find['mars_hemispheres'][0]['img_url']
@@ -68,10 +77,17 @@ def render_index():
 
 # Initializes scrape route; inserts results into  mars_data_DB in MongoDB
 @app.route('/scrape')
-def mars_scrape_data():
-    scrape_results = mars_scrape.scrape_info()
-#     mars_collection.replace_one({}, scrape_results, upsert=True)
-    client.db.collection.update({}, scrape_results, upsert=True)
-    return redirect('/')
-if __name__ == '__main__':
-    app.run()
+def scrape():
+    mars_data = mars_scrape.scrape_info()
+    print("this one", mars_data)
+    mongo.db.collection.update({}, mars_data, upsert=True)
+    return redirect ("/")
+if __name__ == "__main__":
+    app.run(debug=True)
+
+#     scrape_results = mars_scrape.scrape_info()
+# #     mars_collection.replace_one({}, scrape_results, upsert=True)
+#     client.db.collection.update({}, scrape_results, upsert=True)
+#     return redirect('/')
+# if __name__ == '__main__':
+#     app.run()
