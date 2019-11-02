@@ -109,7 +109,7 @@ def scrape_info():
         result1=soup.find('img', class_="wide-image")
         image=url_base+result1["src"]
 
-        result2 = soup.find('h2', class_"title")
+        result2 = soup.find('h2', class_="title")
         title=result2.text
         title=title.rsplit(' ', 1)[0]
         Mars_dictionary = {"Title": title, "Image_URL": image}
