@@ -37,7 +37,7 @@ def scrape_info():
     url = "https://www.jpl.nasa.gov/"
 
     response=req.get(jpl_url)
-    soup=bs(reponse.text, 'html.parser')
+    soup=bs(response.text, 'html.parser')
     result=soup.find('article', class_='carousel_item').attrs
 
     style=str(result['style'])
