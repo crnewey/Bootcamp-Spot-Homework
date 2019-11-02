@@ -104,7 +104,7 @@ def scrape_info():
         url_base = 'https://astrogeology.usgs.gov'
         url = url_base + j
 
-        reponse = req.get(url)
+        response = req.get(url)
         time.sleep(5)
         soup=bs(response.text, 'html.parser')
 
