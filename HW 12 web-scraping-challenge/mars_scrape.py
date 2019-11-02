@@ -8,8 +8,9 @@ import requests as req
 # ----------------
 # # NASA Mars News
 
-def init_browser():
-    return webdriver.Chrome('windows\chromedriver.exe')
+# ---I CANNOT GET THIS TO WORK----
+# def init_browser():
+#     return webdriver.Chrome('windows\chromedriver.exe')
 
 def scrape_info():
     # browser = init_browser()
