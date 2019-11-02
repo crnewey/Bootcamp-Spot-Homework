@@ -22,7 +22,7 @@ def scrape_info():
     nasa_soup = bs(response_1.text, 'html.parser') 
     soup_title = nasa_soup.find('div', class_="content_title")
     news_title = soup_title.text  
-    news = nasa_soup.find('div', class_"rollover_description_inner")
+    news = nasa_soup.find('div', class_="rollover_description_inner")
     news_text = news.text
 
 # ---------------------------------------------
