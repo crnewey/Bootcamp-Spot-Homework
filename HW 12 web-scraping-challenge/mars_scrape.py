@@ -29,7 +29,8 @@ def scrape_info():
 # ---------------------------------------------
     # # JPL Mars Space Images
 
-    browser = webdriver.Chrome('windows/chromedriver.exe')
+# ---- is this necessary: 
+    # browser = webdriver.Chrome('windows/chromedriver.exe')
 
     jpl_fullsize_url = 'https://photojournal.jpl.nasa.gov/jpeg/'                 
     jpl_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"  
