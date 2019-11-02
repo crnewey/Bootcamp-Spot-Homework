@@ -57,13 +57,13 @@ def scrape_info():
 # -----------------------------------
     # # Mars Weather
 
-    browser = webdriver.Chrome('windows/chromedriver.exe')
+    # browser = webdriver.Chrome('windows/chromedriver.exe')
     tweet_url = 'https://twitter.com/marswxreport?lang=en'      
     response = req.get(tweet_url)  
 
                                                 
     tweet_soup = bs(response.text, 'html.parser') 
-    result = soup.find('div', class_="js-tweet-text-container")
+    result = tweet_soup.find('div', class_="js-tweet-text-container")
 
     weather=result.p.text
 
@@ -86,13 +86,13 @@ def scrape_info():
 # -------------------------------------------------
     # # Mars Hemispheres
 
-    browser = webdriver.Chrome('windows/chromedriver.exe')
+    # browser = webdriver.Chrome('windows/chromedriver.exe')
     usgs_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     # usgs_url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
     response=req.get(usgs_url)  
                                                      
     usgs_soup = bs(response.text, 'html.parser')
-    result=soup.find_all('div', class_="item")
+    result=usgs_soup.find_all('div', class_="item")
 
     url_list = []
     for x in result:
