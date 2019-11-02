@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Use PyMongo to establish Mongo connection
 # client = pymongo.MongoClient('mongodb://localhost:27017/mars_scrape')
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
-mars_data=mars_scrape.scrape_info()
+mars_data = mars_scrape.scrape_info()
 print('this one', mars_data)
 mongo.db.collection.update({}, mars_data, upsert=True)
 
