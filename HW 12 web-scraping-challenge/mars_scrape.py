@@ -44,7 +44,7 @@ def scrape_info():
     style_trim = style.replace('background-image:', "")
     style_trim
 
-    style_trim2 = style_trim.replace(" url('",")
+    style_trim2 = style_trim.replace(" url('", "")
     style_trim2
 
     style_trim3 = style_trim2.replace("'); ", "")
