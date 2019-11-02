@@ -118,7 +118,7 @@ def scrape_info():
         time.sleep(10)
 
         mars_data = {"Title": news_title, "Info": news_text, "Image": image, "Weather": weather, "Facts1": fact_list, "Facts2": fact_list2, "Hemispheres": hemisphere_url_images}
-        return mars_data
-
-    browser.quit()
+    
+    return mars_data
+    # browser.quit()
 
