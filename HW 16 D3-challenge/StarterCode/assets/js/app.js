@@ -21,8 +21,8 @@ var chart = d3.select("#scatter").append("div").classed("chart", true);
   .select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
-  .attr("height", svgHeight);
-//   .attr("class", "chart");
+  .attr("height", svgHeight)
+  .attr("class", "chart");
 
 var chartGroup = svg.append("g").attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -35,7 +35,8 @@ d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
 // d3.csv("data.csv").then(function(healthData, err) {
 //     if (err) throw err;
 
-d3.csv("assets/data.csv").then(function(healthData) {
+d3.csv("data.csv").then(function(healthData) {
+    // visualize(healthData);
     console.log(healthData);
  // Step 1: Parse Data/Cast as numbers
  // ==============================
@@ -109,9 +110,9 @@ d3.csv("assets/data.csv").then(function(healthData) {
 
   var toolTip = d3.tip()
     .attr("class", "tooltip")
-    .offset([80, -60])
+    .offset([40, -60])
     .html(function(d) {
-      return (abbr + '%');
+      return ("<h1>" + d.abbr + "</h1><hr>");
       });
 
   // Step 7: Create tooltip in the chart
@@ -121,7 +122,7 @@ d3.csv("assets/data.csv").then(function(healthData) {
   // Step 8: Create event listeners to display and hide the tooltip
   // ==============================
   circlesGroup.on("click", function(data) {
-    toolTip.show(data);
+    toolTip.show(data, this);
   })
     // onmouseout event
     .on("mouseout", function(data, index) {
@@ -153,7 +154,7 @@ d3.csv("assets/data.csv").then(function(healthData) {
     .attr("class", "axisText")
     .text("Lacks Healtcare(%)");
 
-  chartGroup.append("g")
+  chartGroup.append("text")
     .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
     .attr("class", "axisText")
     .text("In Poverty (%)");
