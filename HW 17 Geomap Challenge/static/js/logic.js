@@ -14,7 +14,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox.high-contrast',
-    accessToken: 'pk.eyJ1IjoiY3JuZXdleSIsImEiOiJjazM2a2hucmkwMnFmM25tcDFyc2N2a25vIn0.Wrm9vJ3lKuuAks_f7j0fBA'
+    accessToken: API_Key
 }).addTo(mymap)
 
 var earthquakes = new L.LayerGroup();
