@@ -4,6 +4,7 @@ import pandas as pd
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
 import requests as req
+import time
 
 # ----------------
 # # NASA Mars News
@@ -72,16 +73,19 @@ def scrape_info():
 
     facts_url = 'https://space-facts.com/mars/'
 
-    fact_list = pd.read_html(facts_url[0])
-    fact_list.columns = ['Characteristic', 'Mars', 'Earth']
-    fact_list
+    fact_list = pd.read_html(facts_url)
+    table1 = fact_list[0]
+    table2 = fact_list[1]
+    table1.columns= ['Characteristic', 'Data']
+    # fact_list.columns = ['Characteristic', 'Mars', 'Earth']
+    # fact_list
+    table2.columns = ['Characteristic', 'Mars', 'Earth']
+    # fact_list2 =pd.read_html(facts_url[1])
+    # fact_list.columns = ['Characteristic', 'Data']
+    # fact_list2
 
-    fact_list2 =pd.read_html(facts_url[1])
-    fact_list.columns = ['Characteristic', 'Data']
-    fact_list2
-
-    fact_list=fact_list.to_html()
-    fact_list2=fact_list2.to_html()
+    fact_list=table1.to_html()
+    fact_list2=table2.to_html()
 
 # -------------------------------------------------
     # # Mars Hemispheres

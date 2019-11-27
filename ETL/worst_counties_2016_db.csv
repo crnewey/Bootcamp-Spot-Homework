@@ -1,0 +1,11 @@
+laus_code,state_fips_code,county_fips_code,year,labor_force,employed,unemployed,unemployment_rate,county,state
+CN0602500000000,6.0,25.0,2016.0,"75,207     ","57,049     ","18,158     ",24.1,Imperial County, CA
+CN7212300000000,72.0,123.0,2016.0,"7,561     ","5,924     ","1,637     ",21.7,Salinas Municipio, PR
+CN0215800000000,2.0,158.0,2016.0,"2,725     ","2,136     ",589     ,21.6,Kusilvak Census Area, AK
+CN7210900000000,72.0,109.0,2016.0,"4,810     ","3,818     ",992     ,20.6,Patillas Municipio, PR
+CN7214900000000,72.0,149.0,2016.0,"7,808     ","6,231     ","1,577     ",20.2,Villalba Municipio, PR
+CN2115300000000,21.0,153.0,2016.0,"3,147     ","2,520     ",627     ,19.9,Magoffin County, KY
+CN7208100000000,72.0,81.0,2016.0,"7,405     ","5,976     ","1,429     ",19.3,Lares Municipio, PR
+CN7213100000000,72.0,131.0,2016.0,"10,712     ","8,688     ","2,024     ",18.9,San Sebastian Municipio, PR
+CN0402700000000,4.0,27.0,2016.0,"94,117     ","76,345     ","17,772     ",18.9,Yuma County, AZ
+CN7215300000000,72.0,153.0,2016.0,"10,726     ","8,713     ","2,013     ",18.8,Yauco Municipio, PR

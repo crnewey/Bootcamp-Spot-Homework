@@ -1,0 +1,11 @@
+laus_code,state_fips_code,county_fips_code,year,labor_force,employed,unemployed,unemployment_rate,county,state
+CN2205100000000,22.0,51.0,2006.0,N.A.,N.A.,N.A.,N.A.,Jefferson Parish, LA
+CN2208700000000,22.0,87.0,2006.0,N.A.,N.A.,N.A.,N.A.,St. Bernard Parish, LA
+CN2207100000000,22.0,71.0,2006.0,N.A.,N.A.,N.A.,N.A.,Orleans Parish, LA
+CN2210300000000,22.0,103.0,2006.0,N.A.,N.A.,N.A.,N.A.,St. Tammany Parish, LA
+CN2209500000000,22.0,95.0,2006.0,N.A.,N.A.,N.A.,N.A.,St. John the Baptist Parish, LA
+CN2207500000000,22.0,75.0,2006.0,N.A.,N.A.,N.A.,N.A.,Plaquemines Parish, LA
+CN2208900000000,22.0,89.0,2006.0,N.A.,N.A.,N.A.,N.A.,St. Charles Parish, LA
+CN0610500000000,6.0,105.0,2006.0,"5,058     ","4,558     ",500     ,9.9     ,Trinity County, CA
+CN2609700000000,26.0,97.0,2006.0,"6,546     ","5,898     ",648     ,9.9     ,Mackinac County, MI
+CN4508900000000,45.0,89.0,2006.0,"15,671     ","14,119     ","1,552     ",9.9     ,Williamsburg County, SC

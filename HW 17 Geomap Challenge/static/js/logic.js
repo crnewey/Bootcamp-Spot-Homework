@@ -75,7 +75,7 @@ earthquakes.addTo(mymap);
 var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function() {
     var div = L.DomUtil.create('div', 'info legend'),
-    var magnitude = [0, 1, 2, 3, 4, 5],
+    var magnitude = (0, 1, 2, 3, 4, 5),
     var labels = [];
 
     div.innerHTML += "<h4 style='margin:4px'>Magnitude</h4>"

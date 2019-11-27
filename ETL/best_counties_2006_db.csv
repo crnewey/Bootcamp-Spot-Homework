@@ -1,0 +1,11 @@
+laus_code,state_fips_code,county_fips_code,year,labor_force,employed,unemployed,unemployment_rate,county,state
+CN4500500000000,45.0,5.0,2006.0,"3,869     ","3,477     ",392     ,10.1     ,Allendale County, SC
+CN2603100000000,26.0,31.0,2006.0,"12,887     ","11,580     ","1,307     ",10.1     ,Cheboygan County, MI
+CN4501100000000,45.0,11.0,2006.0,"9,252     ","8,327     ",925     ,10.0     ,Barnwell County, SC
+CN2105100000000,21.0,51.0,2006.0,"7,067     ","6,363     ",704     ,10.0     ,Clay County, KY
+CN0400100000000,4.0,1.0,2006.0,"20,365     ","18,320     ","2,045     ",10.0     ,Apache County, AZ
+CN5301900000000,53.0,19.0,2006.0,"2,946     ","2,650     ",296     ,10.0     ,Ferry County, WA
+CN2804700000000,28.0,47.0,2006.0,"82,643     ","74,359     ","8,284     ",10.0     ,Harrison County, MS
+CN1607100000000,16.0,71.0,2006.0,"2,231     ","2,188     ",43     ,1.9     ,Oneida County, ID
+CN5603500000000,56.0,35.0,2006.0,"5,640     ","5,538     ",102     ,1.8     ,Sublette County, WY
+CN3009700000000,30.0,97.0,2006.0,"2,816     ","2,767     ",49     ,1.7     ,Sweet Grass County, MT

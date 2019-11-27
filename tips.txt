@@ -1,0 +1,7 @@
+scraping
+
+open anaconda prompt
+cd into the app.py (and remove the app.py)
+next line type "python app.py"
+
+Make sure the index.html is in a folder called templates along with style.css

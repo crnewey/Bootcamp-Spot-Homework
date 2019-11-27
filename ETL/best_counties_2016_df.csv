@@ -1,0 +1,11 @@
+laus_code,state_fips_code,county_fips_code,year,labor_force,employed,unemployed,unemployment_rate,county,state
+CN0806300000000,8.0,63.0,2016.0,"4,543     ","4,448     ",95     ,2.1,Kit Carson County, CO
+CN0806100000000,8.0,61.0,2016.0,847     ,830     ,17     ,2.0,Kiowa County, CO
+CN4820500000000,48.0,205.0,2016.0,"2,961     ","2,901     ",60     ,2.0,Hartley County, TX
+CN1911900000000,19.0,119.0,2016.0,"7,087     ","6,944     ",143     ,2.0,Lyon County, IA
+CN0811700000000,8.0,117.0,2016.0,"21,150     ","20,719     ",431     ,2.0,Summit County, CO
+CN3808100000000,38.0,81.0,2016.0,"2,333     ","2,288     ",45     ,1.9,Sargent County, ND
+CN3005500000000,30.0,55.0,2016.0,"1,043     ","1,023     ",20     ,1.9,McCone County, MT
+CN0809500000000,8.0,95.0,2016.0,"2,474     ","2,426     ",48     ,1.9,Phillips County, CO
+CN3802100000000,38.0,21.0,2016.0,"2,547     ","2,498     ",49     ,1.9,Dickey County, ND
+CN0800900000000,8.0,9.0,2016.0,"2,094     ","2,059     ",35     ,1.7,Baca County, CO
