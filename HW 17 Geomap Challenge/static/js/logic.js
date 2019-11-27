@@ -35,6 +35,7 @@ d3.json(EarthquakesJSON).then(function (geoJson) {
         return magnitude * 4;
     };
 
+    
     function Color(magnitude) {
         if (magnitude > 5) {
             return 'red'
