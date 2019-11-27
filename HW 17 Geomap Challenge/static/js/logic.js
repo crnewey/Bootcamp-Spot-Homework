@@ -30,6 +30,7 @@ L.control.layers(baseLayers, overlays).addTo(mymap);
 var EarthquakesJSON = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson'
 console.log (EarthquakesJSON)
 
+
 d3.json(EarthquakesJSON).then(function (geoJson) {
     function markerSize(magnitude) {
         return magnitude * 4;
