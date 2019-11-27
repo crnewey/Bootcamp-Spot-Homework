@@ -6,11 +6,11 @@ var mymap = L.map('map', {
     timeInterval: "2018-04-01/2018-04-05",
     period: "PT1H"
     },
-    timeDimensionControl: true,
-    layers: [map]
+    timeDimensionControl: true
+    // layers: [map]
 });
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+map = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox.high-contrast',
@@ -31,7 +31,7 @@ var EarthquakesJSON = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary
 console.log (EarthquakesJSON)
 
 
-d3.json(EarthquakesJSON).then(function (geoJson) {
+d3.json(EarthquakesJSON).then(function(geoJson) {
     function markerSize(magnitude) {
         return magnitude * 4;
     };
@@ -76,8 +76,8 @@ earthquakes.addTo(mymap);
 // add legend
 var legend = L.control({ position: 'bottomright' });
 legend.onAdd = function() {
-    var div = L.DomUtil.create('div', 'info legend'),
-    var magnitude = (0, 1, 2, 3, 4, 5),
+    var div = L.DomUtil.create('div', 'info legend')
+    var magnitude = (0, 1, 2, 3, 4, 5)
     var labels = [];
 
     div.innerHTML += "<h4 style='margin:4px'>Magnitude</h4>"
